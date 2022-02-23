@@ -5,7 +5,6 @@
   <VirtualDirectory Name="src">
     <VirtualDirectory Name="vendor">
       <VirtualDirectory Name="imgui">
-        <File Name="src/vendor/imgui/main.cpp" ExcludeProjConfig="Debug;"/>
         <File Name="src/vendor/imgui/imstb_truetype.h"/>
         <File Name="src/vendor/imgui/imstb_textedit.h"/>
         <File Name="src/vendor/imgui/imstb_rectpack.h"/>
