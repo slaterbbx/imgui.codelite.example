@@ -20,6 +20,7 @@ $sudo apt install libglfw3-dev
 ## Some thoughts
 Linker required the following librarys
 - glfw;dl;GL
+
 Compiler required the following options
 - -std=c++11
 - -Wformat
