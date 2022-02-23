@@ -12,7 +12,7 @@
         <File Name="src/vendor/imgui/imgui_widgets.cpp"/>
         <File Name="src/vendor/imgui/imgui_tables.cpp"/>
         <File Name="src/vendor/imgui/imgui_internal.h"/>
-        <File Name="src/vendor/imgui/imgui_impl_opengl3_loader.h" ExcludeProjConfig="Debug;"/>
+        <File Name="src/vendor/imgui/imgui_impl_opengl3_loader.h" ExcludeProjConfig=""/>
         <File Name="src/vendor/imgui/imgui_impl_opengl3.h"/>
         <File Name="src/vendor/imgui/imgui_impl_opengl3.cpp"/>
         <File Name="src/vendor/imgui/imgui_impl_glfw.h"/>
