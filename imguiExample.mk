@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=Kyle Gallagher
-Date                   :=23/02/22
+Date                   :=27/02/22
 CodeLitePath           :=/home/slaterbbx/.codelite
 LinkerName             :=/usr/bin/g++
 SharedObjectLinkerName :=/usr/bin/g++ -shared -fPIC
@@ -60,7 +60,7 @@ AS       := /usr/bin/as
 ## User defined environment variables
 ##
 CodeLiteDir:=/usr/share/codelite
-Objects0=$(IntermediateDirectory)/src_vendor_imgui_imgui_draw.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_vendor_imgui_imgui_widgets.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_vendor_imgui_imgui_tables.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_vendor_imgui_imgui_demo.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_vendor_imgui_imgui.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_vendor_imgui_imgui_impl_opengl3.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_vendor_imgui_imgui_impl_glfw.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_vendor_imgui_imgui_draw.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_vendor_imgui_imgui_widgets.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_vendor_imgui_imgui_tables.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_vendor_imgui_imgui_demo.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_vendor_imgui_imgui.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_vendor_imgui_imgui_impl_opengl3.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_vendor_imgui_imgui_impl_glfw.cpp$(ObjectSuffix) 
 
 
 
@@ -91,14 +91,6 @@ PreBuild:
 ##
 ## Objects
 ##
-$(IntermediateDirectory)/src_vendor_imgui_imgui_draw.cpp$(ObjectSuffix): src/vendor/imgui/imgui_draw.cpp $(IntermediateDirectory)/src_vendor_imgui_imgui_draw.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/slaterbbx/Documents/code/cpp/imguiExample/src/vendor/imgui/imgui_draw.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_vendor_imgui_imgui_draw.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/src_vendor_imgui_imgui_draw.cpp$(DependSuffix): src/vendor/imgui/imgui_draw.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_vendor_imgui_imgui_draw.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_vendor_imgui_imgui_draw.cpp$(DependSuffix) -MM src/vendor/imgui/imgui_draw.cpp
-
-$(IntermediateDirectory)/src_vendor_imgui_imgui_draw.cpp$(PreprocessSuffix): src/vendor/imgui/imgui_draw.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_vendor_imgui_imgui_draw.cpp$(PreprocessSuffix) src/vendor/imgui/imgui_draw.cpp
-
 $(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp $(IntermediateDirectory)/main.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/slaterbbx/Documents/code/cpp/imguiExample/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/main.cpp$(DependSuffix): main.cpp
@@ -106,6 +98,14 @@ $(IntermediateDirectory)/main.cpp$(DependSuffix): main.cpp
 
 $(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
+
+$(IntermediateDirectory)/src_vendor_imgui_imgui_draw.cpp$(ObjectSuffix): src/vendor/imgui/imgui_draw.cpp $(IntermediateDirectory)/src_vendor_imgui_imgui_draw.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/slaterbbx/Documents/code/cpp/imguiExample/src/vendor/imgui/imgui_draw.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_vendor_imgui_imgui_draw.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_vendor_imgui_imgui_draw.cpp$(DependSuffix): src/vendor/imgui/imgui_draw.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_vendor_imgui_imgui_draw.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_vendor_imgui_imgui_draw.cpp$(DependSuffix) -MM src/vendor/imgui/imgui_draw.cpp
+
+$(IntermediateDirectory)/src_vendor_imgui_imgui_draw.cpp$(PreprocessSuffix): src/vendor/imgui/imgui_draw.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_vendor_imgui_imgui_draw.cpp$(PreprocessSuffix) src/vendor/imgui/imgui_draw.cpp
 
 $(IntermediateDirectory)/src_vendor_imgui_imgui_widgets.cpp$(ObjectSuffix): src/vendor/imgui/imgui_widgets.cpp $(IntermediateDirectory)/src_vendor_imgui_imgui_widgets.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/slaterbbx/Documents/code/cpp/imguiExample/src/vendor/imgui/imgui_widgets.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_vendor_imgui_imgui_widgets.cpp$(ObjectSuffix) $(IncludePath)
